@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+SQLAlchemy
+psycopg2-binary
+pydantic
+jinja2
+pdfkit
+celery[redis]
+redis
+boto3
+requests
+python-multipart
+alembic
