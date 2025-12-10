@@ -1,0 +1,32 @@
+import os
+from pydantic import BaseSettings
+
+class Settings(BaseSettings):
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql+psycopg2://postgres:postgres@db:5432/propscan")
+    REDIS_URL: str = os.getenv("REDIS_URL", "redis://redis:6379/0")
+    S3_BUCKET: str = os.getenv("S3_BUCKET", "propscan-bucket")
+    S3_ENDPOINT: str = os.getenv("S3_ENDPOINT", "http://minio:9000")
+    S3_ACCESS_KEY: str = os.getenv("S3_ACCESS_KEY", "minioadmin")
+    S3_SECRET_KEY: str = os.getenv("S3_SECRET_KEY", "minioadmin")
+    SECRET_KEY: str = os.getenv("SECRET_KEY", "changeme")
+    JWT_ALGORITHM: str = "HS256"
+    class Config:
+        env_file = ".env"
+
+settings = Settings()
+import os
+from pydantic import BaseSettings
+
+class Settings(BaseSettings):
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql+psycopg2://postgres:postgres@db:5432/propscan")
+    REDIS_URL: str = os.getenv("REDIS_URL", "redis://redis:6379/0")
+    S3_BUCKET: str = os.getenv("S3_BUCKET", "propscan-bucket")
+    S3_ENDPOINT: str = os.getenv("S3_ENDPOINT", "http://minio:9000")
+    S3_ACCESS_KEY: str = os.getenv("S3_ACCESS_KEY", "minioadmin")
+    S3_SECRET_KEY: str = os.getenv("S3_SECRET_KEY", "minioadmin")
+    SECRET_KEY: str = os.getenv("SECRET_KEY", "changeme")
+    JWT_ALGORITHM: str = "HS256"
+    class Config:
+        env_file = ".env"
+
+settings = Settings()
