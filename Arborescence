@@ -1,0 +1,29 @@
+propscan-ai/
+├─ backend/
+│  ├─ app/
+│  │  ├─ main.py
+│  │  ├─ config.py
+│  │  ├─ models.py
+│  │  ├─ schemas.py
+│  │  ├─ crud.py
+│  │  ├─ db.py
+│  │  ├─ tasks.py
+│  │  ├─ ml_stub.py
+│  │  ├─ pdfgen.py
+│  │  └─ requirements.txt
+│  ├─ Dockerfile
+│  └─ alembic/ (optionnel)
+├─ frontend/
+│  ├─ package.json
+│  ├─ tsconfig.json
+│  ├─ src/
+│  │  ├─ main.tsx
+│  │  ├─ App.tsx
+│  │  ├─ api.ts
+│  │  ├─ pages/
+│  │  │  ├─ Dashboard.tsx
+│  │  │  └─ NewAnalysis.tsx
+│  │  └─ index.css
+│  └─ Dockerfile
+├─ docker-compose.yml
+└─ README.md
